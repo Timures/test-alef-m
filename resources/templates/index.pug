@@ -4,5 +4,17 @@ html
     meta(charset = 'utf-8')
     meta(name='viewport', content="initial-scale=1.0, width=device-width")
     title Webpack app
+    link(rel='stylesheet', href='dist/css/main.css')
   body
-    h1 test puga
+    nav
+        .container
+            .row
+                .col-md-4
+                    button#sidebarCollapse.btn
+                        i.fa.fa-bars
+                .col
+                .col-md-3
+        .row
+            .sidebar
+    
+    script(src='dist/js/app.js')

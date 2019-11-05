@@ -1,3 +1,13 @@
+//$fa-font-path: "node_modules/@fortawesome/fontawesome-free/WebFonts" !default;
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid";
+.fa,.fa-bars,.fas,.far,.fal,.fab {
+    font-family: 'Font Awesome 5 Free';
+}
+
 @import '../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss';
+
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'common.scss';
+@import 'header.scss';

@@ -1,4 +1,31 @@
 body {
     // Creates two color stops, start and end, by specifying a color and position for each color stop.
-    @include gradient-y($start-color: $blue, $end-color: $indigo, $start-percent: 0%, $end-percent: 100%)
+    @include gradient-y($start-color: $blue, $end-color: $indigo, $start-percent: 0%, $end-percent: 100%);
+}
+.fa,.fa-bars,.fas,.far,.fal,.fab {
+    font-family: 'Font Awesome 5 Free';
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
