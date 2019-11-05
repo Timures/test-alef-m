@@ -1,0 +1,33 @@
+{
+  "name": "alef-m",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"hello\""
+  },
+  "keywords": [
+    "gulp",
+    "test",
+    "task",
+    "alef-m",
+    "bootstrap"
+  ],
+  "author": "Timur Yessentayev",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "css-reset-and-normalize": "^2.1.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}
