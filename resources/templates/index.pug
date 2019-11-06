@@ -9,11 +9,11 @@ html
     header.header
       nav.navbar
         .container
-          button#sidebarCollapse.btn.pull-left
+          button#sidebarCollapse.btn.btn-light.pull-left
             i.fa.fa-bars
           a(class='navbar-brand mx-auto' href='/') Company Logo
           .dropdown.show
-            a(class='nav-link dropdown-toggle' href='#' id='navbarLang' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Options
+            a(class='nav-link dropdown-toggle btn-light' href='#' id='navbarLang' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Options
             div(class='dropdown-menu' aria-labelledby='navbarLang')
               a(class='dropdown-item' href='#') Lang RU
               a(class='dropdown-item' href='#') Lang ENG
@@ -22,22 +22,24 @@ html
         include modules/left-menu.pug
       section#content.container-fluid
         .row
-            .col-3.d-none.d-md-block
+            .col-4.col-lg-3.d-none.d-md-block
                 .first-content
                   .first-content__item
+                    .first-content__logo
+                    .first-content__text
             .col
                 .second-content
-            .col-3.d-none.d-lg-block
+            .col-4.col-lg-3.d-none.d-lg-block
                 .third-content
                   .third-content__item
-    footer.footer
+    footer.footer.d-flex.align-items-center
       .container
         .footer-copyright.float-left 
-          i.fa.fa-copyright
-          span Copyright 2017
+          i.fa.fa-copyright 
+          span  Copyright 2017
         .footer-right.float-right
-          button.btn Save
-          button.btn Back
+          button.btn.btn-light Save
+          button.btn.btn-light Back
 
 
     script(src='dist/js/app.js')

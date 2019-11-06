@@ -1,0 +1,30 @@
+#content{
+    border: 1px solid red;
+}
+
+.first-content, .second-content, .third-content {
+    overflow: auto;
+    max-height: 100vh;
+    padding: 15px;
+}
+
+.first-content {
+    background-color: #fff;
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 240px;
+        height: 80px;
+    }
+    &__logo {
+        width: 48px;
+        height: 48px;
+        background-color: $main-violet-color;
+        border-radius: 50%;
+    }
+    &__text {
+        font-size: 20px;
+        color: $main-violet-color;
+    }
+}

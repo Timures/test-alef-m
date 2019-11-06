@@ -10,8 +10,8 @@
     <header class="header">
       <nav class="navbar">
         <div class="container">
-          <button class="btn pull-left" id="sidebarCollapse"><i class="fa fa-bars"></i></button><a class="navbar-brand mx-auto" href="/">Company Logo</a>
-          <div class="dropdown show"><a class="nav-link dropdown-toggle" href="#" id="navbarLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</a>
+          <button class="btn btn-light pull-left" id="sidebarCollapse"><i class="fa fa-bars"></i></button><a class="navbar-brand mx-auto" href="/">Company Logo</a>
+          <div class="dropdown show"><a class="nav-link dropdown-toggle btn-light" href="#" id="navbarLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</a>
             <div class="dropdown-menu" aria-labelledby="navbarLang"><a class="dropdown-item" href="#">Lang RU</a><a class="dropdown-item" href="#">Lang ENG</a></div>
           </div>
         </div>
@@ -27,15 +27,18 @@
       </section>
       <section class="container-fluid" id="content">
         <div class="row">
-          <div class="col-3 d-none d-md-block">
+          <div class="col-4 col-lg-3 d-none d-md-block">
             <div class="first-content">
-              <div class="first-content__item"></div>
+              <div class="first-content__item">
+                <div class="first-content__logo"></div>
+                <div class="first-content__text"></div>
+              </div>
             </div>
           </div>
           <div class="col">
             <div class="second-content"></div>
           </div>
-          <div class="col-3 d-none d-lg-block">
+          <div class="col-4 col-lg-3 d-none d-lg-block">
             <div class="third-content">
               <div class="third-content__item"></div>
             </div>
@@ -43,12 +46,12 @@
         </div>
       </section>
     </section>
-    <footer class="footer">
+    <footer class="footer d-flex align-items-center">
       <div class="container">
-        <div class="footer-copyright float-left"> <i class="fa fa-copyright"></i><span>Copyright 2017</span></div>
+        <div class="footer-copyright float-left"> <i class="fa fa-copyright"> </i><span> Copyright 2017</span></div>
         <div class="footer-right float-right">
-          <button class="btn">Save</button>
-          <button class="btn">Back</button>
+          <button class="btn btn-light">Save</button>
+          <button class="btn btn-light">Back</button>
         </div>
       </div>
     </footer>

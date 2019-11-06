@@ -11929,7 +11929,49 @@ body {
   font-size: 32px;
   color: #fff; }
 
+#sidebar {
+  width: 300px;
+  min-height: 100vh;
+  background: #7386D5;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid green;
+  opacity: 1;
+  white-space: nowrap; }
+
+#sidebar.collapsed {
+  width: 0;
+  opacity: 0; }
+
+#content {
+  border: 1px solid red; }
+
+.first-content, .second-content, .third-content {
+  overflow: auto;
+  max-height: 100vh;
+  padding: 15px; }
+
+.first-content {
+  background-color: #fff; }
+  .first-content__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 80px; }
+  .first-content__logo {
+    width: 48px;
+    height: 48px;
+    background-color: #7E00FF;
+    border-radius: 50%; }
+  .first-content__text {
+    font-size: 20px;
+    color: #7E00FF; }
+
 .footer {
   height: 100px;
   background-image: linear-gradient(to bottom, #7000E0 0%, #7E00FF 100%);
   background-repeat: repeat-x; }
+  .footer-copyright {
+    font-size: 18px;
+    color: #fff; }
