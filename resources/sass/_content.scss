@@ -9,17 +9,25 @@
     background-color: #fff;
     &__item {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
         height: 80px;
         border-bottom: 1px solid #cecece;
+        word-spacing: nowrap;
+        &--first {
+            z-index: 10;
+            min-height: 80px;
+            top: -15px;
+            background-color:#F6F6F6;
+        }
     }
     &__logo {
         width: 48px;
         height: 48px;
         background-color: $main-violet-color;
         border-radius: 50%;
+        margin-right: 5px;
     }
     &__text {
         font-size: 20px;

@@ -9,11 +9,11 @@ html
     header.header
       nav.navbar
         .container
-          button#sidebarCollapse.btn.btn-light.pull-left
+          button#sidebarCollapse.btn.btn-light.btn-violet.pull-left
             i.fa.fa-bars
           a(class='navbar-brand mx-auto' href='/') Company Logo
           .dropdown.show
-            a(class='nav-link dropdown-toggle btn-light' href='#' id='navbarLang' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Options
+            a(class='nav-link dropdown-toggle btn-violet' href='#' id='navbarLang' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Options
             div(class='dropdown-menu' aria-labelledby='navbarLang')
               a(class='dropdown-item' href='#') Lang RU
               a(class='dropdown-item' href='#') Lang ENG
@@ -38,8 +38,12 @@ html
           i.fa.fa-copyright 
           span  Copyright 2017
         .footer-right.float-right
-          button.btn.btn-light Save
-          button.btn.btn-light Back
+          button.btn.btn-light.btn-violet
+            i.far.fa-save
+            span  Save
+          button.btn.btn-light.btn-back 
+            i.fa.fa-reply
+            span  Back
 
 
     script(src='dist/js/app.js')

@@ -9,4 +9,11 @@ body {
     display: flex;
 }
 
-
+.btn-violet {
+    color: $main-violet-color;
+    background-color: #f8f9fa;
+}
+.btn-back {
+    color: #fff;
+    background-color: $main-violet-color;
+}

@@ -20084,84 +20084,50 @@
 
 	$(document).ready(function () {
 	  // show on first time
-	  $('.first-content').html('');
-	  console.log('click f t');
-	  var firstHtmlElement = '';
-	  var thirdHtmlElement = '';
-	  $(jsParse[0]).each(function (index, item) {
-	    // first 
-	    $(item.firstBlock).each(function (index_fb, item_fb) {
-	      firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">' + item_fb + '</div></div>';
-	    });
-	    $('.first-content').append(firstHtmlElement); // second
+	  $('.first-content').html(''); // console.log('click f t');
 
-	    $('.second-content').html(item.secondBlock); // third
-
-	    $(item.thirdBlock).each(function (index_tb, item_tb) {
-	      thirdHtmlElement += '<div class="third-content__item">' + item_tb + '</div>';
-	    });
-	    $('.third-content__item').html(thirdHtmlElement);
-	  }); // show sidebar  
+	  getContentByMenu(jsParse[0]); // show sidebar  
 
 	  $('#sidebarCollapse').on('click', function () {
 	    $('#sidebar').toggleClass('collapsed');
 	  }); // read json file
 
 	  $('#first').on('click', function () {
-	    $('.first-content').html('');
-	    console.log('click f t');
-	    var firstHtmlElement = '';
-	    var thirdHtmlElement = '';
-	    $(jsParse[0]).each(function (index, item) {
-	      // first 
-	      $(item.firstBlock).each(function (index_fb, item_fb) {
-	        firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">' + item_fb + '</div></div>';
-	      });
-	      $('.first-content').append(firstHtmlElement); // second
+	    $('.first-content').html(''); // console.log('click f t');
 
-	      $('.second-content').html(item.secondBlock); // third
-
-	      $(item.thirdBlock).each(function (index_tb, item_tb) {
-	        thirdHtmlElement += '<div class="third-content__item">' + item_tb + '</div>';
-	      });
-	      $('.third-content__item').html(thirdHtmlElement);
-	    }); // close menu
+	    getContentByMenu(jsParse[0]); // close menu
 
 	    $('#sidebar').toggleClass('collapsed');
 	  }); // second 
 
 	  $('#second').on('click', function () {
-	    $('.first-content').html('');
-	    console.log('click s t');
-	    var firstHtmlElement = '';
-	    var thirdHtmlElement = '';
-	    $(jsParse[1]).each(function (index, item) {
-	      // first 
-	      $(item.firstBlock).each(function (index_fb, item_fb) {
-	        firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">' + item_fb + '</div></div>';
-	      });
-	      $('.first-content').append(firstHtmlElement); // second
+	    $('.first-content').html(''); // console.log('click s t');
 
-	      $('.second-content').html(item.secondBlock); // third
-
-	      $(item.thirdBlock).each(function (index_tb, item_tb) {
-	        thirdHtmlElement += '<div class="third-content__item">' + item_tb + '</div>';
-	      });
-	      $('.third-content__item').html(thirdHtmlElement);
-	    }); // close menu
+	    getContentByMenu(jsParse[1]); // close menu
 
 	    $('#sidebar').toggleClass('collapsed');
 	  }); // third
 
 	  $('#third').on('click', function () {
-	    $('.first-content').html('');
-	    console.log('click s t');
-	    var firstHtmlElement = '';
-	    var thirdHtmlElement = '';
-	    $(jsParse[2]).each(function (index, item) {
-	      // first 
+	    $('.first-content').html(''); // console.log('click s t');
+
+	    getContentByMenu(jsParse[2]); // close menu
+
+	    $('#sidebar').toggleClass('collapsed');
+	  }); // functions
+
+	  function getContentByMenu(jsonArray) {
+	    $(jsonArray).each(function (index, item) {
+	      var firstHtmlElement = '';
+	      var thirdHtmlElement = ''; // first 
+
 	      $(item.firstBlock).each(function (index_fb, item_fb) {
-	        firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">' + item_fb + '</div></div>';
+	        if (index_fb == 0) {
+	          // console.log('first');
+	          firstHtmlElement += '<div class="first-content__item first-content__item--first position-sticky"><div class="first-content__logo"></div><div class="first-content__text">' + item_fb + '</div></div>';
+	        } else {
+	          firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">' + item_fb + '</div></div>';
+	        }
 	      });
 	      $('.first-content').append(firstHtmlElement); // second
 
@@ -20171,10 +20137,9 @@
 	        thirdHtmlElement += '<div class="third-content__item">' + item_tb + '</div>';
 	      });
 	      $('.third-content__item').html(thirdHtmlElement);
-	    }); // close menu
+	    });
+	  } // document ready
 
-	    $('#sidebar').toggleClass('collapsed');
-	  }); // document ready
 	});
 
 })));
