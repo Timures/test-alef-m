@@ -11902,13 +11902,17 @@ body {
     position: relative;
     z-index: 15; } }
 
+@media (max-width: 767.98px) {
+  .header {
+    height: auto; } }
+
 .navbar-brand {
   font-size: 32px;
   color: #fff; }
 
 #sidebar {
   width: 300px;
-  min-height: 100vh;
+  min-height: calc(100% - 100px);
   background: #7386D5;
   color: #fff;
   transition: all 0.5s ease-in-out;

@@ -9,3 +9,8 @@
         z-index: 15; // in #sidebar z-index 11
     }
 }
+@include media-breakpoint-down(sm) {
+    .header {
+        height: auto;
+    }
+}
