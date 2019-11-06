@@ -1,6 +1,6 @@
 body {
     // Creates two color stops, start and end, by specifying a color and position for each color stop.
-    @include gradient-y($start-color: $blue, $end-color: $indigo, $start-percent: 0%, $end-percent: 100%);
+    @include gradient-y($start-color: #7000E0, $end-color: #7E00FF, $start-percent: 0%, $end-percent: 100%);
 }
 .fa,.fa-bars,.fas,.far,.fal,.fab {
     font-family: 'Font Awesome 5 Free';

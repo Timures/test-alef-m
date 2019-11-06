@@ -9,6 +9,9 @@
 @import '../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss';
 @import 'variables.scss';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'common.scss';
+@import 'common.scss'; // sidebar content
 @import 'header.scss';
 @import 'nav.scss';
+@import 'sidebar.scss';
+@import 'content.scss';
+@import 'footer.scss';

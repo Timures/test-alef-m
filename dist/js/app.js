@@ -20086,12 +20086,23 @@
 	  }); // read file
 
 	  $('#first').on('click', function () {
-	    console.log('click');
+	    $('.first-content').html('');
+	    console.log('click f t');
+	    var firstHtmlElement = '';
+	    var thirdHtmlElement = '';
 	    $(jsParse).each(function (index, item) {
-	      console.log(index, item.firstBlock);
-	      $('.first-content').html(item.firstBlock);
-	      $('.second-content').html(item.secondBlock);
-	      $('.third-content').html(item.thirdBlock);
+	      // first 
+	      $(item.firstBlock).each(function (index_fb, item_fb) {
+	        firstHtmlElement += '<div class="first-content__item">' + item_fb + '</div>';
+	      });
+	      $('.first-content').append(firstHtmlElement); // second
+
+	      $('.second-content').html(item.secondBlock); // third
+
+	      $(item.thirdBlock).each(function (index_tb, item_tb) {
+	        thirdHtmlElement += '<div class="third-content__item">' + item_tb + '</div>';
+	      });
+	      $('.third-content__item').html(thirdHtmlElement);
 	    });
 	  });
 	});

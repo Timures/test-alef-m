@@ -22,12 +22,22 @@ html
         include modules/left-menu.pug
       section#content.container-fluid
         .row
-            .col-3
+            .col-3.d-none.d-md-block
                 .first-content
+                  .first-content__item
             .col
                 .second-content
-            .col-3
+            .col-3.d-none.d-lg-block
                 .third-content
+                  .third-content__item
+    footer.footer
+      .container
+        .footer-copyright.float-left 
+          i.fa.fa-copyright
+          span Copyright 2017
+        .footer-right.float-right
+          button.btn Save
+          button.btn Back
 
 
     script(src='dist/js/app.js')
