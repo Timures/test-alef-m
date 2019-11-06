@@ -7,16 +7,27 @@ html
     link(rel='stylesheet', href='dist/css/main.css')
   body
     header.header
-        nav
-            button#sidebarCollapse.btn
-                i.fa.fa-bars
-            a(class='nav__logo' href='/') Company Logo
-            h4 dropdown
-    section#main
-        section#sidebar
-            h4 sidebar
-        section#content
-            h4 content
+      nav.navbar
+        .container
+          button#sidebarCollapse.btn.pull-left
+            i.fa.fa-bars
+          a(class='navbar-brand mx-auto' href='/') Company Logo
+          .dropdown.show
+            a(class='nav-link dropdown-toggle' href='#' id='navbarLang' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Options
+            div(class='dropdown-menu' aria-labelledby='navbarLang')
+              a(class='dropdown-item' href='#') Lang RU
+              a(class='dropdown-item' href='#') Lang ENG
+    section#main.container
+      section#sidebar
+        include modules/left-menu.pug
+      section#content.container-fluid
+        .row
+            .col-3
+                .first-content
+            .col
+                .second-content
+            .col-3
+                .third-content
 
-        
+
     script(src='dist/js/app.js')
