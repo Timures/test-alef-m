@@ -13,6 +13,10 @@
 		return module = { exports: {} }, fn(module, module.exports), module.exports;
 	}
 
+	function getCjsExportFromNamespace (n) {
+		return n && n['default'] || n;
+	}
+
 	var jquery = createCommonjsModule(function (module) {
 	/*!
 	 * jQuery JavaScript Library v3.4.1
@@ -11919,6 +11923,13 @@
 	Popper.placements = placements;
 	Popper.Defaults = Defaults;
 
+	var popper = /*#__PURE__*/Object.freeze({
+		__proto__: null,
+		'default': Popper
+	});
+
+	var require$$1 = getCjsExportFromNamespace(popper);
+
 	var bootstrap = createCommonjsModule(function (module, exports) {
 	/*!
 	  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -11926,7 +11937,7 @@
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 	  */
 	(function (global, factory) {
-	   factory(exports, jquery, Popper) ;
+	   factory(exports, jquery, require$$1) ;
 	})(commonjsGlobal, function (exports, $, Popper) {
 
 	  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
@@ -16344,10 +16355,14 @@
 
 	unwrapExports(bootstrap);
 
+	// For some plugins and global use.
+
 	window.jQuery = window.$ = $;
 	$(document).ready(function () {
 	  $('#sidebarCollapse').on('click', function () {
-	    $('#sidebar').toggleClass('active');
+	    $('#sidebar').toggleClass('collapsed');
+	    $('#content').toggleClass('active');
+	    console.log("hide show");
 	  });
 	});
 

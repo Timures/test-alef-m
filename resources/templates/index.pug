@@ -6,15 +6,17 @@ html
     title Webpack app
     link(rel='stylesheet', href='dist/css/main.css')
   body
-    nav
-        .container
-            .row
-                .col-md-4
-                    button#sidebarCollapse.btn
-                        i.fa.fa-bars
-                .col
-                .col-md-3
-        .row
-            .sidebar
-    
+    header.header
+        nav
+            button#sidebarCollapse.btn
+                i.fa.fa-bars
+            a(class='nav__logo' href='/') Company Logo
+            h4 dropdown
+    section#main
+        section#sidebar
+            h4 sidebar
+        section#content
+            h4 content
+
+        
     script(src='dist/js/app.js')

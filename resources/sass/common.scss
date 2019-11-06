@@ -5,27 +5,32 @@ body {
 .fa,.fa-bars,.fas,.far,.fal,.fab {
     font-family: 'Font Awesome 5 Free';
 }
-.wrapper {
+#main {
     display: flex;
-    width: 100%;
-    align-items: stretch;
 }
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    width:300px;
+    min-height: 100vh;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid green;
+    opacity: 1;
+    white-space: nowrap;
 }
+#sidebar.collapsed {
+    // transform: translateX(-300px);
+    width: 0;
+    opacity: 0;
+}
+#content{
+    display: flex;
+    flex: 1 0 auto;
+    border: 1px solid red;
 
-#sidebar.active {
-    margin-left: -250px;
+    // width: 70%;
 }
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+#content.active {
+    // width: 100%;
+    
 }
