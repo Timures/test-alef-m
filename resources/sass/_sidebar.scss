@@ -19,6 +19,9 @@
         position: absolute;
         z-index: 11;
         transform: translateY(-100%);
+        overflow: auto;
+        max-height: 100vh;
+        padding: 15px;
     }
     #sidebar.collapsed {
         transform: translateY(0);

@@ -20099,10 +20099,11 @@
 	      thirdHtmlElement += '<div class="third-content__item">' + item_tb + '</div>';
 	    });
 	    $('.third-content__item').html(thirdHtmlElement);
-	  });
+	  }); // show sidebar  
+
 	  $('#sidebarCollapse').on('click', function () {
 	    $('#sidebar').toggleClass('collapsed');
-	  }); // read file
+	  }); // read json file
 
 	  $('#first').on('click', function () {
 	    $('.first-content').html('');
