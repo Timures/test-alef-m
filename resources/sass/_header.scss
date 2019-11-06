@@ -2,3 +2,10 @@
     height: 100px;
     @include gradient-y($start-color: #7000E0, $end-color: #7E00FF, $start-percent: 0%, $end-percent: 100%);
 }
+
+@include media-breakpoint-down(md) {
+    .header {
+        position: relative;
+        z-index: 15; // in #sidebar z-index 11
+    }
+}

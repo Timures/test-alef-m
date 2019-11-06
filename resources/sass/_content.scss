@@ -14,8 +14,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 240px;
+        width: 100%;
         height: 80px;
+        border-bottom: 1px solid $main-violet-color;
     }
     &__logo {
         width: 48px;
@@ -27,4 +28,12 @@
         font-size: 20px;
         color: $main-violet-color;
     }
+}
+
+.second-content {
+    background-color: #cecece;
+}
+
+.third-content {
+    background-color: #fff;
 }

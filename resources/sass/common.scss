@@ -8,35 +8,5 @@ body {
 #main {
     display: flex;
 }
-#sidebar {
-    width:300px;
-    min-height: 100vh;
-    background: #7386D5;
-    color: #fff;
-    transition: all 0.5s ease-in-out;
-    border: 1px solid green;
-    opacity: 1;
-    white-space: nowrap;
-}
-#sidebar.collapsed {
-    // transform: translateX(-300px);
-    width: 0;
-    opacity: 0;
-}
-#content{
-    // display: flex;
-    // flex: 1 0 auto;
-    border: 1px solid red;
 
-}
-.first-content, .second-content, .third-content {
-    overflow: auto;
-    max-height: 100vh;
-    padding: 15px;
-}
-.first-content, .third-content {
-    background-color: #fff;
-}
-.second-content {
-    background-color: #cecece;
-}
+
