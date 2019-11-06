@@ -22,14 +22,17 @@ var json = (function() {
 var jsObject = JSON.stringify(json.text);
 //  console.log(jsObject);
 var jsParse = jQuery.parseJSON(jsObject);
-// console.log(jsParse);
+// $(jsParse[1]).each(function(m_index, m_item) {
+//     console.log(m_index, m_item);
+// });
+
 $(document).ready(function () {
     // show on first time
     $('.first-content').html('');
         console.log('click f t');
         var firstHtmlElement = '';
         var thirdHtmlElement = '';
-        $(jsParse).each(function(index,item) {
+        $(jsParse[0]).each(function(index,item) {
             // first 
             $(item.firstBlock).each(function(index_fb, item_fb){
                firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">'+ item_fb + '</div></div>';
@@ -53,7 +56,7 @@ $(document).ready(function () {
         console.log('click f t');
         var firstHtmlElement = '';
         var thirdHtmlElement = '';
-        $(jsParse).each(function(index,item) {
+        $(jsParse[0]).each(function(index,item) {
             // first 
             $(item.firstBlock).each(function(index_fb, item_fb){
                firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">'+ item_fb + '</div></div>';
@@ -67,8 +70,54 @@ $(document).ready(function () {
              });
             $('.third-content__item').html(thirdHtmlElement);
         });
+        // close menu
+        $('#sidebar').toggleClass('collapsed');
     });
-    
-
-    
+    // second 
+    $('#second').on('click', function() {
+        $('.first-content').html('');
+        console.log('click s t');
+        var firstHtmlElement = '';
+        var thirdHtmlElement = '';
+        $(jsParse[1]).each(function(index,item) {
+            // first 
+            $(item.firstBlock).each(function(index_fb, item_fb){
+               firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">'+ item_fb + '</div></div>';
+            });
+            $('.first-content').append(firstHtmlElement);
+            // second
+            $('.second-content').html(item.secondBlock);
+            // third
+            $(item.thirdBlock).each(function(index_tb, item_tb){
+                thirdHtmlElement += '<div class="third-content__item">'+ item_tb + '</div>';
+             });
+            $('.third-content__item').html(thirdHtmlElement);
+        });
+        // close menu
+        $('#sidebar').toggleClass('collapsed');
+    });
+    // third
+    $('#third').on('click', function() {
+        $('.first-content').html('');
+        console.log('click s t');
+        var firstHtmlElement = '';
+        var thirdHtmlElement = '';
+        $(jsParse[2]).each(function(index,item) {
+            // first 
+            $(item.firstBlock).each(function(index_fb, item_fb){
+               firstHtmlElement += '<div class="first-content__item"><div class="first-content__logo"></div><div class="first-content__text">'+ item_fb + '</div></div>';
+            });
+            $('.first-content').append(firstHtmlElement);
+            // second
+            $('.second-content').html(item.secondBlock);
+            // third
+            $(item.thirdBlock).each(function(index_tb, item_tb){
+                thirdHtmlElement += '<div class="third-content__item">'+ item_tb + '</div>';
+             });
+            $('.third-content__item').html(thirdHtmlElement);
+        });
+        // close menu
+        $('#sidebar').toggleClass('collapsed');
+    });
+    // document ready
 });

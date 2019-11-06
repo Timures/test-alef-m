@@ -11916,7 +11916,6 @@ body {
   background: #7386D5;
   color: #fff;
   transition: all 0.5s ease-in-out;
-  border: 1px solid green;
   opacity: 1;
   white-space: nowrap; }
 
@@ -11936,9 +11935,6 @@ body {
     transform: translateY(0);
     width: 300px;
     opacity: 1; } }
-
-#content {
-  border: 1px solid red; }
 
 .first-content, .second-content, .third-content {
   overflow: auto;
